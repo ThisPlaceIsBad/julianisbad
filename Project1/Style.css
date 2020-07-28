@@ -1,0 +1,15 @@
+h1{
+	color: navy;
+	font: 20px Arial;
+}
+
+h3{
+	font: 16px Arial;
+	color: white;
+}
+
+.boxes{
+	width: 80px;
+	border: navy 5px double;
+	background-color: seagreen;
+}
