@@ -1,21 +1,18 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-ctx.moveTo(5,5);
-ctx.lineTo(125,125);
+ctx.beginPath();
 
-ctx.moveTo(100,100);
-ctx.lineTo(200,200);
-
-ctx.moveTo(50,50);
-ctx.lineTo(700,600);
-
-ctx.strokeStyle = "red";
-ctx.lineWidth = 6;
+ctx.moveTo(150, 25);
+ctx.lineTo(225, 150);
+ctx.lineTo(75, 150);
+ctx.closePath();
 ctx.stroke();
-
-ctx.fillStyle = "green";
-ctx.fillRect(100, 100, 150, 100);
-
-ctx.strokeStyle = "blue";
-ctx.strokeRect(150, 150, 75, 150);
+ctx.fillStyle = "navy";
+ctx.fill();
+ctx.beginPath();
+ctx.arc(150, 150, 50, 0, 6.28);
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
