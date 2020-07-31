@@ -16,7 +16,27 @@ function preload(){
 }
 
 function createv(){
-	
+	game.physics.starSystem(Phaser.Physics.ARCADE);
+
+	game.add.sprite(0, 0, "sky");
+
+	platforms = game.add.physicsGroup();
+	platforms.enableBody = true;
+
+	var ground = platforms.create(0, 550, "ground");
+	ground.scale.setTo(2,2);
+	ground.body.immovable = true;
+
+	var ledge = platforms.create(400,400, "ground");
+	ledge.body.immovable = true;
+	ledge = platforms.create(-100,250, "ground");
+	ledge.body.immovable = true;
+
+	var style = {font: "bold 32px Arial", fill:"#fff"}
+	scorelabel = game.add.text(300, 560, "Score: ", style);
+	scoretext = game.addtest(420, 560, score, style);
+	lifelabel = game.add.text(10, 5, "Lives: ", style);
+	lifetext = game.addtest(120, 5, live, style);
 }
 
 function upload(){
