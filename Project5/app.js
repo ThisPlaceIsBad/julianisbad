@@ -1,4 +1,4 @@
-var game = new Phaser.Gmae(900, 600, Phaser.AUTO, '',{
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '',{
 	preload:preload,
 	create:create,
 	update:update
@@ -34,9 +34,9 @@ function create(){
 
 	var style = {font: "bold 32px Arial", fill:"#fff"}
 	scorelabel = game.add.text(300, 560, "Score: ", style);
-	scoretext = game.addtest(420, 560, score, style);
+	scoretext = game.addtext(420, 560, score, style);
 	lifelabel = game.add.text(10, 5, "Lives: ", style);
-	lifetext = game.addtest(120, 5, live, style);
+	lifetext = game.addtext(120, 5, life, style);
 }
 
 function upload(){
