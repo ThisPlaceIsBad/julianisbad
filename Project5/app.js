@@ -1,5 +1,5 @@
 var game = new Phaser.Gmae(900, 600, Phaser.AUTO, '',{
-	preloaf:preload,
+	preload:preload,
 	create:create,
 	update:update
 });
@@ -11,12 +11,12 @@ function preload(){
 	game.load.image("sky", "assets/sky.png");
 	game.load.image("ground", "assets/platform.png");
 	game.load.image("star", "assets/star.png");
-	game.load.spritesheet("dude", "assets/dude.png"m 32, 48);
-	game.load.spritesheet("baddie", "assets/baddie.png"m 32, 32);
+	game.load.spritesheet("dude", "assets/dude.png", 32, 48);
+	game.load.spritesheet("baddie", "assets/baddie.png", 32, 32);
 }
 
-function createv(){
-	game.physics.starSystem(Phaser.Physics.ARCADE);
+function create(){
+	game.physics.startSystem(Phaser.Physics.ARCADE);
 
 	game.add.sprite(0, 0, "sky");
 
